@@ -18,7 +18,7 @@ body{
 	-webkit-user-select: none;  /* Chrome all / Safari all */
   	-moz-user-select: none;     /* Firefox all */
   	-ms-user-select: none;
-  	background-color: #fff;
+  	background-color: #FFFFFF;
 }
 
 .header{
@@ -112,7 +112,7 @@ body{
 }
 
 .current-info-container{
-	height: calc(100vh - 120px);
+	height: calc(100vh - 170px);
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-direction: column;
@@ -150,6 +150,24 @@ body{
 	font-weight: bold;
 	font-size: 40px;
 	color: #454545;
+}
+
+.places-btn-container{
+	height: 50px;
+	width: 100%;
+	background-color: #CB1E20;
+	text-align: center;
+	color: #FFFFFF;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	font-size: 16px;
+
 }
 
 .navicon-button{
