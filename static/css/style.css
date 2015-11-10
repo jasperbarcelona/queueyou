@@ -48,6 +48,14 @@ body{
 	float: right;
 	cursor: pointer;
 	height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 }
 
 #brand{
@@ -150,9 +158,6 @@ body{
 	cursor: pointer;
 	user-select: none;
 	opacity: .8; 
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 .navicon-button .navicon:before, .navicon-button .navicon:after{
