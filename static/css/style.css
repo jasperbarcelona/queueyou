@@ -124,9 +124,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', end
 
 #round-loader{
 	position: relative;
-	height: 250px;
-	width: 250px;
-	border: 12px solid #CB1E20;
+	height: 260px;
+	width: 260px;
+	border: 8px solid #CB1E20;
 	border-radius: 50%;
 	display: -webkit-flex;
 	display: flex;
