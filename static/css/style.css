@@ -1,0 +1,242 @@
+@font-face
+	{
+		font-family: Lato;
+		src:url('../fonts/lato.woff2');
+	}
+
+html,body{
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	overflow-y: hidden;
+	overflow-x: hidden;
+	color: #696969;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+  	-moz-user-select: none;     /* Firefox all */
+  	-ms-user-select: none;
+  	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfff4+0,e9e9ce+100;Wax+3D+%232 */
+background: rgb(252,255,244); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(252,255,244,1) 0%, rgba(233,233,206,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(252,255,244,1) 0%,rgba(233,233,206,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(252,255,244,1) 0%,rgba(233,233,206,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.header{
+	color: #FFFFFF;
+	width: 100%;
+	height: 60px;
+	background-color: #CB1E20;
+}
+
+.header-left{
+	text-align: left;
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding-left: 15px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: left;
+	justify-content: left;
+}
+
+#nav-btn-container{
+	float: right;
+	cursor: pointer;
+	height: 100%;
+}
+
+#brand{
+	font-size: 22px;
+}
+
+.header-right{
+	text-align: right;
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding-right: 15px !important;
+}
+
+.transaction-info-container{
+	width: 100%;
+	height: 60px;
+	background-color: transparent;
+}
+
+.transaction-left{
+	float: left;
+	height: 100%;
+	width: 50%;
+	color: #B10D10;
+	font-size: 22px;
+	padding-left: 15px;
+	text-align: left;
+	text-align: left;
+}
+
+.transaction-right{
+	float: right;
+	height: 100%;
+	width: 50%;
+	font-size: 22px;
+	padding-right: 15px;
+	text-align: right;
+}
+
+.user-number-label{
+	color: #B10D10;
+}
+
+#user-number{
+	color: #454545;
+}
+
+.transaction-details{
+	display: inline-block;
+	position: relative;
+	top: 60%;
+	transform: translateY(-50%);
+}
+
+.current-info-container{
+	height: calc(100vh - 120px);
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	padding-bottom: 20px;
+	background-color: transparent;
+}
+
+#round-loader{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border: 12px solid #CB1E20;
+	border-radius: 50%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.now-serving-label{
+	font-size: 22px;
+	color: #454545;
+}
+
+#now-serving{
+	font-weight: bold;
+	font-size: 40px;
+	color: #454545;
+}
+
+.navicon-button{
+	display: inline-block;
+	transition: 0.25s;
+	cursor: pointer;
+	user-select: none;
+	opacity: .8; 
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.navicon-button .navicon:before, .navicon-button .navicon:after{
+	transition: 0.25s;
+}
+
+.navicon{
+	position: relative;
+	width: 2.5em;
+	height: 3px;
+	background: #fff;
+	transition: 0.5s;
+	border-radius: 2.5rem; 
+}
+
+.navicon:before, .navicon:after{
+	display: block;
+	content: "";
+	height: 3px;
+	width: 2.5em;
+	background: #fff;
+	position: absolute;
+	z-index: -1;
+	transition: 0.5s 0.25s;
+	border-radius: 1rem; 
+}
+
+.navicon:before {
+	top: .625em;
+}
+
+.navicon:after{
+	top: -.625em;
+}
+
+.open:not(.steps) .navicon:before,
+.open:not(.steps) .navicon:after {
+	top: 0 !important; 
+}
+
+.open .navicon:before,
+.open .navicon:after{
+	transition: 0.5s;
+}
+
+.open.plus .navicon,
+.open.x .navicon {
+	background: transparent;
+}
+
+.open.plus .navicon:before,
+.open.x .navicon:before{
+	transform: rotate(-45deg);
+}
+
+.open.plus .navicon:after,
+.open.x .navicon:after{
+	transform: rotate(45deg);
+}
+
+.open.plus {
+	transform: scale(0.75) rotate(45deg);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+section {
+	display: flex;
+	max-width: 40rem;
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: .5rem .5rem 0 0;
+	background: #E7E6DD;
+	overflow: hidden;
+}
+section *, section *:before, section *:after {
+	transform: translate3d(0, 0, 0);
+}
+
