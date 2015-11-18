@@ -8,9 +8,9 @@ import os
 
 app = flask.Flask(__name__)
 app.secret_key = '234234rfascasascqweqscasefsdvqwefe2323234dvsv'
-QUEUE_URL = 'http://127.0.0.1:9000/api/queue/fetch/'
-SVC_URL = 'http://127.0.0.1:9000/api/user/svc/generate/'
-LOGIN_URL = 'http://127.0.0.1:9000/api/user/login/'
+QUEUE_URL = 'http://appyourserver.herokuapp.com/api/queue/fetch/'
+SVC_URL = 'http://appyourserver.herokuapp.com/api/user/svc/generate/'
+LOGIN_URL = 'http://appyourserver.herokuapp.com/api/user/login/'
 
 
 @app.route('/', methods=['GET', 'POST'])
