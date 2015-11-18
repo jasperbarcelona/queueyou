@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header-left">
+			<span id="brand">App Yours</span>
+		</div>
+	</div>
+	<div id="main-login">
+		<div id="login-container" class="form-container">
+			<h2 class="login-label">Login</h2><br />
+			<input id="login-msisdn" type="text" class="form-control" placeholder="Mobile Number"/>
+			<span id="login-error"></span><br />
+			<button type="submit" class="btn login-btn" onclick="generate_svc()">Login</button><br />
+			<button type="button" class="btn signup-btn">Sign Up</button>
+		</div>
+		<div id="signup-container" class="form-container">
+			<h2 class="login-label">Sign Up</h2><br />
+			<input id="name" type="text" class="form-control" placeholder="Name"/><br />
+			<input id="email" type="text" class="form-control" placeholder="Email"/><br />
+			<input id="signup-msisdn" type="text" class="form-control" placeholder="Mobile Number"/>
+			<span id="login-error"></span><br />
+			<button type="button" class="btn signup-btn">Sign Up</button><br />
+			<span class="back-to-login-label">Already have an account? <span id="back-to-login">Login</span></span>
+		</div>
+	</div>
+
+	<script src="../static/js/jquery-1.11.0.min.js"></script>
+	<script src="../static/js/functions.js"></script>
+	<script src="../static/js/animations.js"></script>
+	<script src="../static/js/jquery.scrollTo.min.js"></script>
+</body>
+</html>

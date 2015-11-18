@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 </head>
-<body>
+<body onload="poll()">
 	<div class="header">
 		<div class="header-left">
 			<span id="brand">App Yours</span>
@@ -19,30 +20,57 @@
 		    </div>
 		</div>
 	</div>
-</body>
+
+	<div id="main-container">
+	<div id="loading">Loading...</div>
+	<div id="no-transaction">
+		Nothing.<br />
+		<span id="refresh-btn" class="glyphicon glyphicon-refresh"></span>
+	</div>
 	<div class="transaction-info-container">
-		<div class="transaction-left"><span class="transaction-details">BPI - Makati</span></div>
+		<div class="transaction-left"><span id="client-name" class="transaction-details"></span></div>
 		<div class="transaction-right">
 		<span class="transaction-details user-number-label">Your No:</span>
-		<span id="user-number" class="transaction-details">N0097</span>
+		<span id="queue-number" class="transaction-details"></span>
 		</div>
 	</div>
 
 	<div class="current-info-container">
 		<div id="round-loader">
 			<span class="now-serving-label">Now Serving</span>
-			<span id="now-serving">N0090</span>
+			<span id="now-serving"></span>
 			<span class="estimated-time-label">Estimated Time</span>
-			<span id="estimated-time">1h, 22m</span>
+			<span id="estimated-time"><span id="hours"></span>h, <span id="minutes"></span>m</span>
 		</div>
 	</div>
+	</div>
 
-	<div class="places-btn-container">
-		<span class="places-btn">Nearby Places</span>
+	<div class="places-container">
+		<div id="places-btn-container">
+			<div id="places-btn-cover"></div>
+			<span class="places-btn">Nearby Places</span>
+			<div class="close-places-btn-container">
+				<span class="material-icons" id="close-places-btn">&#xE5CD;</span>
+			</div>
+		</div>
+		<div class="main-places-container">
+			<div class='category-nav-container'>
+				<span class="category-nav-item active">Food</span>
+				<span class="category-nav-item">Clothing</span>
+				<span class="category-nav-item">Utilities</span>
+				<span class="category-nav-item">Hardware</span>
+			</div>
+			<div class="main-places">
+				<div class="place-category"></div>
+				<div class="place-category"></div>
+				<div class="place-category"></div>
+			</div>
+		</div>
 	</div>
 
 	<script src="../static/js/jquery-1.11.0.min.js"></script>
     <script src="../static/js/animations.js"></script>
     <script src="../static/js/functions.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
+</body>
 </html>

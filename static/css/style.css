@@ -6,7 +6,7 @@
 
 html,body{
 	width: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	padding: 0;
 	margin: 0;
 }
@@ -70,6 +70,51 @@ body{
 	padding-right: 15px !important;
 }
 
+#main-container{
+	position: relative;
+}
+
+#loading{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;
+	z-index: 2000;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	color: #696969;
+	font-size: 16px;
+}
+
+#no-transaction{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;
+	z-index: 1000;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	color: #696969;
+	font-size: 16px;
+}
+
+#refresh-btn{
+	margin-top: 5px;
+	font-size: 16px;
+}
+
 .transaction-info-container{
 	width: 100%;
 	height: 60px;
@@ -121,7 +166,7 @@ body{
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	background-color: transparent;
 }
 
@@ -152,7 +197,75 @@ body{
 	color: #454545;
 }
 
-.places-btn-container{
+.places-container{
+	position: absolute;
+	top: calc(100% - 50px);
+	height: 100vh;
+	width: 100%;
+	z-index: 3000;
+}
+
+.main-places-container{
+	height: calc(100% - 50px);
+	width: 100%;
+	background-color: #FFFFFF;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.category-nav-container{
+	height: 40px;
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	padding-top: 7px;
+}
+
+.category-nav-item{
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 14px;
+	width: 25%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+.category-nav-item:after {
+    content: '';
+    display: block;
+    height: 2px !important;
+    background: transparent;
+    width: 0;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.category-nav-item.active:after{
+	width: 100%;
+	background: #B10D10 !important;
+}
+
+.main-places{
+	height: calc(100% - 90px);
+	width: 300%;
+	position: fixed;
+}
+
+.place-category{
+	height: 100%;
+	width: 100vw;
+	float: left;
+}
+
+#places-btn-container{
+	position: relative;
 	height: 50px;
 	width: 100%;
 	background-color: #CB1E20;
@@ -167,7 +280,41 @@ body{
 	-webkit-justify-content: center;
 	justify-content: center;
 	font-size: 16px;
+	cursor: pointer;
+}
 
+#places-btn-cover{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	z-index: 2000;
+	background-color: #CB1E20;
+}
+
+.places-btn{
+	font-size: 16px;
+}
+
+.close-places-btn-container{
+	position: absolute;
+	top: 0;
+	right: 15px;
+	height: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+#close-places-btn{
+	position: relative;
+	cursor: pointer;
+	display: none;
 }
 
 .navicon-button{
@@ -219,6 +366,7 @@ body{
 .open .navicon:before,
 .open .navicon:after{
 	transition: 0.5s;
+	width: 2.5em;
 }
 
 .open.plus .navicon,
@@ -228,33 +376,15 @@ body{
 
 .open.plus .navicon:before,
 .open.x .navicon:before{
-	transform: rotate(-45deg);
+	transform: rotate(-40deg);
 }
 
 .open.plus .navicon:after,
 .open.x .navicon:after{
-	transform: rotate(45deg);
+	transform: rotate(40deg);
 }
 
 .open.plus {
 	transform: scale(0.75) rotate(45deg);
-}
-
-* {
-	box-sizing: border-box;
-}
-
-section {
-	display: flex;
-	max-width: 40rem;
-	margin: 0 auto;
-	flex-direction: column;
-	justify-content: space-between;
-	border-radius: .5rem .5rem 0 0;
-	background: #E7E6DD;
-	overflow: hidden;
-}
-section *, section *:before, section *:after {
-	transform: translate3d(0, 0, 0);
 }
 
